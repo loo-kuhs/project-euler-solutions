@@ -8,7 +8,7 @@ const NUM = 600851475143;
  * @param number - El número para encontrar el factor primo más grande de.
  * @returns El mayor factor primo del número 600851475143.
  */
-const lgstPrimeFactor = (number) => {
+export function primeFactor(number) {
   let factors = [],
     d = 2;
 
@@ -29,7 +29,7 @@ const lgstPrimeFactor = (number) => {
 /**
  * * Encontrar el mayor factor primo del número 600851475143.
  */
-let result = lgstPrimeFactor(NUM);
+let result = primeFactor(NUM);
 let largestPrime = [0];
 for (let i = 0; i < result.length; i++) {
   if (largestPrime < result[i]) {
