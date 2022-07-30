@@ -5,8 +5,8 @@ const NUM = 600851475143;
 /**
  * * Toma un número y devuelve una matriz de todos los factores
  * * primos de ese número
- * @param number - El número para encontrar el factor primo más grande de.
- * @returns El mayor factor primo del número 600851475143.
+ * @param number - El número para encontrar el factor primo más grande.
+ * @returns El mayor factor primo del número (number) .
  */
 export function primeFactor(number) {
   let factors = [],
