@@ -13,7 +13,7 @@ const NATURAL_NUMBERS = 100;
  * @returns La diferencia entre la suma de los cuadrados de los cien primeros números naturales y el
  * cuadrado de la suma.
  */
-const sumSquare = (numbers) => {
+const sumSquareDifference = (numbers) => {
   let sum = 0,
     sum2 = 0;
 
@@ -24,5 +24,5 @@ const sumSquare = (numbers) => {
   return sum * sum - sum2;
 };
 
-let result = sumSquare(NATURAL_NUMBERS);
+let result = sumSquareDifference(NATURAL_NUMBERS);
 console.log(result)
