@@ -25,4 +25,4 @@ const sumSquareDifference = (numbers) => {
 };
 
 let result = sumSquareDifference(NATURAL_NUMBERS);
-console.log(result)
+console.log(result);
