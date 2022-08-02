@@ -1,7 +1,7 @@
 /**
- * * Si el número es menor que 2, no es primo. De lo contrario, si 
- * * es divisible por 2, no es primo. De lo contrario, si es 
- * * divisible por cualquier número impar desde 3 hasta la raíz 
+ * * Si el número es menor que 2, no es primo. De lo contrario, si
+ * * es divisible por 2, no es primo. De lo contrario, si es
+ * * divisible por cualquier número impar desde 3 hasta la raíz
  * * cuadrada del número, no es primo. De lo contrario, es primo.
  * @param x - El número a probar.
  * @returns Una función que toma un número y devuelve un valor booleano.
@@ -47,4 +47,28 @@ export const primeFactor = (number) => {
     }
   }
   return factors;
+};
+
+/**
+ * * Toma una cadena, un número y una posición, y devuelve el 
+ * * producto del número de caracteres en la cadena que comienza en 
+ * * la posición.
+ * 
+ * * Por ejemplo, si llamas a la función así:
+ *    ? producto("123456789", 3, 2);
+ * 
+ * * Devolverá el producto de los caracteres en la cadena que comienza 
+ * * en la posición 2 y continúa por 3 caracteres. En este caso, 
+ * * ese es el producto de los caracteres "345", que es 120.
+ * @param string - la cadena para buscar
+ * @param number - el número de dígitos adyacentes a multiplicar
+ * @param position - la posición inicial de la subcadena
+ * @returns El producto de los caracteres en la cadena.
+ */
+export const product = (string, number, position) => {
+  let prod = 1;
+  for (let i = position; i < position + number; i++) {
+    prod = prod * string.charAt(i);
+  }
+  return prod;
 };
