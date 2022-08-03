@@ -1,3 +1,20 @@
+
+/**
+ * * Utiliza una búsqueda binaria para encontrar la raíz cuadrada 
+ * * entera de un número.
+ * @param x - El número para encontrar la raíz cuadrada de.
+ * @returns La raíz cuadrada del número.
+ */
+export const sqrtInt = (x) => {
+  if (x < 0) throw new Error("Raiz de numero negativo.");
+  let y = 0;
+  for (let i = 1 << 15; i !== 0; i >>= 1) {
+    y |= i;
+    if (y > 46340 || y * y > x) y ^= i;
+  }
+  return y;
+};
+
 /**
  * * Si el número es menor que 2, no es primo. De lo contrario, si
  * * es divisible por 2, no es primo. De lo contrario, si es
@@ -8,6 +25,7 @@
  */
 export const isPrime = (x) => {
   if (x < 0) throw new Error("Numero negativo");
+  let end = Math.floor(Math.sqrt(x));
   if (x === 0 || x === 1) {
     return false;
   } else if (x === 2) {
@@ -16,13 +34,29 @@ export const isPrime = (x) => {
     if (x % 2 === 0) {
       return false;
     }
-    for (let i = 3, end = Math.sqrt(x); i <= end; i += 2) {
+    for (let i = 3; i <= end; i += 2) {
       if (x % i === 0) {
         return false;
       }
     }
     return true;
   }
+};
+
+const listPrimes = (number) => {
+  let isPrime = new Boolean([listPrimes(number)]);
+  let count = 0;
+  for (b of isPrime) {
+    if (b) count++;
+  }
+  let result = [count];
+  for (let i = 0, j = 0; i < isPrime.length; i++) {
+    if (isPrime[i]) {
+      result[j] = i;
+      j++;
+    }
+  }
+  return result;
 };
 
 /**
@@ -50,15 +84,15 @@ export const primeFactor = (number) => {
 };
 
 /**
- * * Toma una cadena, un número y una posición, y devuelve el 
- * * producto del número de caracteres en la cadena que comienza en 
+ * * Toma una cadena, un número y una posición, y devuelve el
+ * * producto del número de caracteres en la cadena que comienza en
  * * la posición.
- * 
+ *
  * * Por ejemplo, si llamas a la función así:
  *    ? producto("123456789", 3, 2);
- * 
- * * Devolverá el producto de los caracteres en la cadena que comienza 
- * * en la posición 2 y continúa por 3 caracteres. En este caso, 
+ *
+ * * Devolverá el producto de los caracteres en la cadena que comienza
+ * * en la posición 2 y continúa por 3 caracteres. En este caso,
  * * ese es el producto de los caracteres "345", que es 120.
  * @param string - la cadena para buscar
  * @param number - el número de dígitos adyacentes a multiplicar
