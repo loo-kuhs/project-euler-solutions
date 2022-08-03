@@ -66,14 +66,16 @@ export const GRID = [
   ],
 ];
 
+class miLibreria {}
+
 /**
  * * Utiliza una búsqueda binaria para encontrar la raíz cuadrada
  * * entera de un número.
  * @param x - El número para encontrar la raíz cuadrada de.
  * @returns La raíz cuadrada del número.
  */
-export const sqrtInt = (x) => {
-  if (x < 0) throw new Error("Raiz de numero negativo.");
+export const sqrt = (x) => {
+  if (x < 0) throw new Error("Raíz cuadrada de número negativo.");
   let y = 0;
   for (let i = 1 << 15; i !== 0; i >>= 1) {
     y |= i;
@@ -155,6 +157,13 @@ export const primeFactor = (number) => {
 };
 
 /**
+ * * Dado un número, devuelve la suma de todos los números del 1 a 
+ * * ese número.
+ * @param number - el numero de filas en el triangulo
+ */
+export const triangle = (number) => (number * (number + 1)) / 2;
+
+/**
  * * Toma una cadena, un número y una posición, y devuelve el
  * * producto del número de caracteres en la cadena que comienza en
  * * la posición.
@@ -179,7 +188,7 @@ export const product = (string, number, position) => {
 };
 
 /**
- * * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el 
+ * * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el
  * * producto de los números en la cuadrícula en esa dirección.
  * @param ox - coordenada x del origen
  * @param oy - coordenada y del primer número
