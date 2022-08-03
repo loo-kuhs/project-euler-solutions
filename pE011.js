@@ -8,7 +8,7 @@ const CONSECUTIVE = 4;
 
 /**
  * * Recorre la cuadrícula y, para cada celda, verifica el producto de
- * *las cuatro posibles líneas de contras de longitud que pasan por esa celda.
+ * * las cuatro posibles líneas de contras de longitud que pasan por esa celda.
  * @param grid - una matriz 2D de enteros
  * @param cons - el numero de numeros consecutivos a multiplicar
  * @returns El mayor producto de cuatro números adyacentes en la misma dirección (arriba, abajo,
