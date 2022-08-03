@@ -1,6 +1,5 @@
-
 /**
- * * Utiliza una búsqueda binaria para encontrar la raíz cuadrada 
+ * * Utiliza una búsqueda binaria para encontrar la raíz cuadrada
  * * entera de un número.
  * @param x - El número para encontrar la raíz cuadrada de.
  * @returns La raíz cuadrada del número.
@@ -24,22 +23,26 @@ export const sqrtInt = (x) => {
  * @returns Una función que toma un número y devuelve un valor booleano.
  */
 export const isPrime = (x) => {
-  if (x < 0) throw new Error("Numero negativo");
-  let end = Math.floor(Math.sqrt(x));
-  if (x === 0 || x === 1) {
-    return false;
-  } else if (x === 2) {
-    return true;
-  } else {
-    if (x % 2 === 0) {
+  try {
+    if (x < 0) throw new Error("Numero negativo");
+    let end = Math.floor(Math.sqrt(x));
+    if (x === 0 || x === 1) {
       return false;
-    }
-    for (let i = 3; i <= end; i += 2) {
-      if (x % i === 0) {
+    } else if (x === 2) {
+      return true;
+    } else {
+      if (x % 2 === 0) {
         return false;
       }
+      for (let i = 3; i <= end; i += 2) {
+        if (x % i === 0) {
+          return false;
+        }
+      }
+      return true;
     }
-    return true;
+  } catch (error) {
+    console.log(error)
   }
 };
 
