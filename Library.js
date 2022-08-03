@@ -66,8 +66,6 @@ export const GRID = [
   ],
 ];
 
-class miLibreria {}
-
 /**
  * * Utiliza una búsqueda binaria para encontrar la raíz cuadrada
  * * entera de un número.

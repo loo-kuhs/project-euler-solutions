@@ -5,7 +5,7 @@
 /* 
  * * Importar la función `isPrime` del archivo `miLibreria.js`. 
  */
-import { isPrime } from "./miLibreria.js";
+import { isPrime } from "./Library.js";
 
 const PRIME = 10001;
 

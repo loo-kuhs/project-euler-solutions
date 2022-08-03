@@ -2,7 +2,7 @@
  * * Solución al problema 10 de projecteuler.net
  */
 
-import { isPrime } from './miLibreria.js';
+import { isPrime } from "./Library.js";
 
 const NUMBER = 2000000;
 

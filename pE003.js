@@ -5,7 +5,7 @@
 /* 
  * * Importar la función `primeFactor` desde el archivo `miLibreria.js` 
  */
-import { primeFactor } from "./miLibreria.js";
+import { primeFactor } from "./Library.js";
 
 const NUM = 600851475143;
 

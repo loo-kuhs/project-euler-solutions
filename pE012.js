@@ -2,7 +2,7 @@
  * * Solución al problema 12 de projecteuler.net
  */
 
-import { primeFactor, triangle } from "./miLibreria.js";
+import { primeFactor, triangle } from "./Library.js";
 
 const NUMBER = 500;
 

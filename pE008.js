@@ -2,7 +2,7 @@
  * * Solución al problema 8 de projecteuler.net
  */
 
-import { product } from "./miLibreria.js";
+import { product } from "./Library.js";
 
 const NUMBER =
   "73167176531330624919225119674426574742355349194934" +
