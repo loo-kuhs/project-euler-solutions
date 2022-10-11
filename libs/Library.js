@@ -1,4 +1,4 @@
-import { GRID } from './Utils.js';
+import { GRID } from "../utils/Utils.js";
 
 /**
  * * Toma dos cadenas, las invierte, las suma, invierte el resultado
@@ -15,7 +15,7 @@ export const sum = (a, b) => {
     x,
     y;
 
-  for (let i = 1; (i <= aLength || i <= bLength); i++) {
+  for (let i = 1; i <= aLength || i <= bLength; i++) {
     x = i > aLength ? 0 : parseInt(a.charAt(aLength - i), 10);
     y = i > bLength ? 0 : parseInt(b.charAt(bLength - i), 10);
     sum = ((x + y + cr) % 10) + "" + sum;
@@ -92,8 +92,7 @@ const listPrimes = (number) => {
 };
 
 /**
- * * Toma un número y devuelve una matriz de todos los factores
- * * primos de ese número
+ * Toma un número y devuelve una matriz de todos los factores primos de ese número.
  * @param number - El número para encontrar el factor primo más grande.
  * @returns El mayor factor primo del número (number) .
  */

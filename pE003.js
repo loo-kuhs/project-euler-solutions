@@ -2,15 +2,15 @@
  * * Solución al problema 3 de projecteuler.net
  */
 
-/* 
- * * Importar la función `primeFactor` desde el archivo `miLibreria.js` 
+/**
+ * Importar la función `primeFactor` desde el archivo `Library.js` 
  */
-import { primeFactor } from "./Library.js";
+import { primeFactor } from "./libs/Library.js";
 
 const NUM = 600851475143;
 
 /**
- * * Encontrar el mayor factor primo del número 600851475143.
+ * Encontrar el mayor factor primo del número 600851475143.
  */
 let result = primeFactor(NUM);
 let largestPrime = [0];
