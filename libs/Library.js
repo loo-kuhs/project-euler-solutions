@@ -151,9 +151,9 @@ export const nthDivisor = (number) => {
 };
 
 /**
- * Toma un número y devuelve el triángulo de ese número. El triángulo del número es la 
- * suma de los enteros desde 1 hasta el número. 
- * 
+ * Toma un número y devuelve el triángulo de ese número. El triángulo del número es la
+ * suma de los enteros desde 1 hasta el número.
+ *
  * Por ejemplo, si pasamos 5 a la función, devolvería 15 (1 + 2 + 3 + 4 + 5).
  * @param number - El número de filas en el triángulo.
  */
@@ -200,4 +200,21 @@ export const gridProduct = (ox, oy, dx, dy, number) => {
     result *= GRID[oy + i * dy][ox + i * dx];
   }
   return result;
+};
+
+/**
+ * Toma un número y devuelve una matriz de números que son el resultado de la Conjetura 
+ * de Collatz.
+ * 
+ * @param number - El número inicial de la secuencia.
+ * @returns Una matriz de números que son el resultado de la conjetura de Collatz.
+ */
+export const collatzConjecture = (number) => {
+  let chain = [];
+  while (number !== 1) {
+    chain.push(number);
+    number % 2 === 0 ? (number = number / 2) : (number = 3 * number + 1);
+  }
+  chain.push(1);
+  return chain;
 };
