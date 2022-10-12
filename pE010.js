@@ -2,19 +2,19 @@
  * * Solución al problema 10 de projecteuler.net
  */
 
-import { isPrime } from "./Library.js";
+import { isPrime } from "./libs/Library.js";
 
 const NUMBER = 2000000;
 
 /**
- * * Empezamos con un número y luego le restamos uno hasta llegar a 
- * * cero. Para cada número que restamos, comprobamos si es primo. 
- * * Si es así, lo sumamos a la suma. Cuando llegamos a cero, 
- * * devolvemos la suma.
+ * Empezamos con un número y luego le restamos uno hasta llegar a cero. Para cada
+ * número que restamos, comprobamos si es primo.
+ * Si es así, lo sumamos a la suma. Cuando llegamos a cero, devolvemos la suma.
+ *
  * @param number - El número al que quieres sumar todos los números primos
- * @returns La suma de todos los números primos hasta el número proporcionado inclusive.
+ * @returns La suma de todos los números primos hasta el número proporcionado.
  */
-const sumPrimes = (number) => {
+const sumAllPrimeNumsUntil = (number) => {
   let sum = 0;
   while (number--) {
     if (isPrime(number)) {
@@ -22,7 +22,7 @@ const sumPrimes = (number) => {
     }
   }
   return sum;
-}
+};
 
-let result = sumPrimes(NUMBER);
+let result = sumAllPrimeNumsUntil(NUMBER);
 console.log(result);
