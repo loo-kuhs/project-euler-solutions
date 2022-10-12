@@ -3,6 +3,7 @@
  */
 
 const GRID = 20;
+
 const latticePaths = (() => {
   let gridSize = 20,
     grid = [gridSize];
