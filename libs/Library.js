@@ -75,6 +75,23 @@ export const isPrime = (x) => {
   }
 };
 
+/**
+ * Tomamos el número, lo dividimos por 10 y sumamos el resto a la variable inversa, que se multiplica
+ * por 10 cada vez.
+ * @param number - El número a comprobar.
+ * @returns El reverso del número.
+ */
+export const isPalindrome = (number) => {
+  let provisional = number,
+    reverse = 0;
+
+  while (provisional !== 0) {
+    reverse = reverse * 10 + (provisional % 10);
+    provisional = Math.floor(provisional / 10);
+  }
+  return reverse === number;
+};
+
 const listPrimes = (number) => {
   let isPrime = new Boolean([listPrimes(number)]);
   let count = 0;
