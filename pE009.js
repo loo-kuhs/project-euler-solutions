@@ -5,8 +5,8 @@
 const NUMBER = 1000;
 
 /**
- * * Recorre todos los valores posibles de a y b, y luego calcula c,
- * * y si a^2 + b^2 = c^2, devuelve a * b * c
+ * Recorre todos los valores posibles de a y b, y luego calcula c,
+ * y si a^2 + b^2 = c^2, devuelve a * b * c
  * @param number - El número para encontrar el triple pitagórico.
  * @returns El producto del triplete pitagórico cuya suma es igual al número pasado como argumento.
  */
@@ -19,7 +19,7 @@ const pythagoreanTriple = (number) => {
       }
     }
   }
-  throw new Error("No encontrado");
+  throw new Error("No encontrado").message;
 };
 
 let result = pythagoreanTriple(NUMBER);
