@@ -2,7 +2,7 @@
  * * Solución al problema 8 de projecteuler.net
  */
 
-import { product } from "./Library.js";
+import { product } from "./libs/Library.js";
 
 const NUMBER =
   "73167176531330624919225119674426574742355349194934" +
@@ -26,10 +26,11 @@ const NUMBER =
   "05886116467109405077541002256983155200055935729725" +
   "71636269561882670428252483600823257530420752963450";
 const ADJACENT = 13;
+
 /**
- * * Toma una cadena y un número, y devuelve el mayor producto del 
- * * número de dígitos de la cadena.
- * @param string - la cadena de numeros
+ * Toma una cadena y un número, y devuelve el mayor producto del número de dígitos de
+ * la cadena.
+ * @param string - la cadena de números
  * @param number - el número de dígitos adyacentes a multiplicar
  * @returns El mayor producto del número de dígitos en la cadena.
  */
