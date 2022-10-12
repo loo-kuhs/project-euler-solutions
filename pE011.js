@@ -2,16 +2,16 @@
  * * Solución al problema 11 de projecteuler.net
  */
 
-import { gridProduct } from "./Library.js";
-import { GRID } from "./Utils.js";
+import { gridProduct } from "./libs/Library.js";
+import { GRID } from "./utils/Utils.js";
 
 const CONSECUTIVE = 4;
 
 /**
- * * Recorre la cuadrícula y, para cada celda, verifica el producto de
- * * las cuatro posibles líneas de contras de longitud que pasan por esa celda.
- * @param grid - una matriz 2D de enteros
- * @param cons - el numero de numeros consecutivos a multiplicar
+ * Recorre la cuadrícula y, para cada celda, verifica el producto de las cuatro posibles líneas de
+ * contras de longitud que pasan por esa celda.
+ * @param grid - Una matriz 2D de enteros
+ * @param cons - El número de números consecutivos a multiplicar
  * @returns El mayor producto de cuatro números adyacentes en la misma dirección (arriba, abajo,
  * izquierda, derecha o diagonal) en la cuadrícula de 20×20.
  */

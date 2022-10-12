@@ -163,13 +163,13 @@ export const product = (string, number, position) => {
 };
 
 /**
- * * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el
- * * producto de los números en la cuadrícula en esa dirección.
- * @param ox - coordenada x del origen
- * @param oy - coordenada y del primer número
- * @param dx - el cambio en x para cada paso
- * @param dy - el cambio en y entre cada número en la secuencia
- * @param number - el número de números adyacentes a multiplicar
+ * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el producto 
+ * de los números en la cuadrícula en esa dirección.
+ * @param ox - Coordenada x del origen
+ * @param oy - Coordenada y del primer número
+ * @param dx - El cambio en x para cada paso
+ * @param dy - El cambio en y entre cada número en la secuencia
+ * @param number - El número de números adyacentes a multiplicar
  * @returns El producto de los números en la cuadrícula.
  */
 export const gridProduct = (ox, oy, dx, dy, number) => {
