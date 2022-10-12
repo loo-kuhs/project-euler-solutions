@@ -132,11 +132,33 @@ export const primeFactor = (number) => {
 };
 
 /**
- * * Dado un número, devuelve la suma de todos los números del 1 a
- * * ese número.
- * @param number - el numero de filas en el triangulo
+ * Toma un número y devuelve el número de divisores que tiene.
+ * @param number - entero positivo
+ * @returns El número de divisores de un número.
  */
-export const triangle = (number) => (number * (number + 1)) / 2;
+export const nthDivisor = (number) => {
+  let prime = primeFactor(number);
+  let num = 1;
+  while (prime.length) {
+    let current = prime.shift();
+    let count = 1;
+    while (current === prime[0] && prime.length) {
+      prime.shift();
+      count++;
+    }
+    num = num * (count + 1);
+  }
+  return num;
+};
+
+/**
+ * Toma un número y devuelve el triángulo de ese número. El triángulo del número es la 
+ * suma de los enteros desde 1 hasta el número. 
+ * 
+ * Por ejemplo, si pasamos 5 a la función, devolvería 15 (1 + 2 + 3 + 4 + 5).
+ * @param number - El número de filas en el triángulo.
+ */
+export const triangleNumber = (number) => (number * (number + 1)) / 2;
 
 /**
  * * Toma una cadena, un número y una posición, y devuelve el
@@ -163,7 +185,7 @@ export const product = (string, number, position) => {
 };
 
 /**
- * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el producto 
+ * Toma un punto de partida (ox, oy) y una dirección (dx, dy) y devuelve el producto
  * de los números en la cuadrícula en esa dirección.
  * @param ox - Coordenada x del origen
  * @param oy - Coordenada y del primer número
