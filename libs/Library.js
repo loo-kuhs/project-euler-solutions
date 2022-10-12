@@ -1,8 +1,7 @@
 import { GRID } from "../utils/Utils.js";
 
 /**
- * * Toma dos cadenas, las invierte, las suma, invierte el resultado
- * * y devuelve el resultado.
+ * Toma dos cadenas, las invierte, las suma, invierte el resultado y devuelve el resultado.
  * @param a - El primer número a sumar
  * @param b - "1"
  * @returns La suma de los dos números.
