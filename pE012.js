@@ -24,7 +24,7 @@ const firstTriangular = (number) => {
   while (nthDivisor(triangleNumber(i)) <= number) {
     i++;
   }
-  return triangle(i);
+  return triangleNumber(i);
 };
 
 let result = firstTriangular(NUMBER);
