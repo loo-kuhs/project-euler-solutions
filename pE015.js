@@ -11,14 +11,14 @@ const latticePaths = (() => {
     grid[i] = [gridSize];
   }
 
-  return (x, y) => {
+  return (gridX, gridY) => {
     let paths = 0;
-    if (x === 0 || y === 0) return 1;
-    if (x > gridSize || y > gridSize) return -1;
-    if (typeof grid[x][y] === "number") return grid[x][y];
+    if (gridX === 0 || gridY === 0) return 1;
+    if (gridX > gridSize || gridY > gridSize) return -1;
+    if (typeof grid[gridX][gridY] === "number") return grid[gridX][gridY];
 
-    paths = latticePaths(x - 1, y) + latticePaths(x, y - 1);
-    grid[x][y] = paths;
+    paths = latticePaths(gridX - 1, gridY) + latticePaths(gridX, gridY - 1);
+    grid[gridX][gridY] = paths;
     return paths;
   };
 })();
