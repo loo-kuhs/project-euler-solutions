@@ -2,8 +2,8 @@
  * * Solución al problema 11 de projecteuler.net
  */
 
-import { gridProduct } from "./libs/Library.js";
-import { GRID } from "./utils/Utils.js";
+import { gridProduct } from "./src/libs/Library.js";
+import { GRID } from "./src/utils/Utils.js";
 
 const CONSECUTIVE = 4;
 

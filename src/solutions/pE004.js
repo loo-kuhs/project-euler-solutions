@@ -2,13 +2,14 @@
  * * Solución al problema 4 de projecteuler.net
  */
 
-import { isPalindrome } from "./libs/Library.js"
+import { isPalindrome } from "../libs/Library.js";
 
-const NUM1 = 100, NUM2 = 999;
+const NUM1 = 100,
+  NUM2 = 999;
 
 /**
- * Recorre todos los números entre el mínimo y el máximo, y para cada número, recorre todos 
- * los números entre el mínimo y el máximo, y para cada uno de esos números, los multiplica, 
+ * Recorre todos los números entre el mínimo y el máximo, y para cada número, recorre todos
+ * los números entre el mínimo y el máximo, y para cada uno de esos números, los multiplica,
  * y si el producto es un palíndromo y es mayor que el máximo actual, fija el máximo al producto.
  * @param min - el numero mínimo para multiplicar
  * @param max - el numero máximo a multiplicar
@@ -24,11 +25,12 @@ const largestPalindromeProduct = (min, max) => {
       product = a * b;
       if (isPalindrome(product) && product > maxim) {
         maxim = product;
-      } b++;
-    } a++;
+      }
+      b++;
+    }
+    a++;
   }
   return maxim;
 };
 
-let result = largestPalindromeProduct(NUM1, NUM2);
-console.log(result);
+export const pE004 = largestPalindromeProduct(NUM1, NUM2);

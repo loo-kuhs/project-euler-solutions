@@ -2,12 +2,12 @@
  * * Solución al problema 13 de projecteuler.net
  */
 
-import { sum } from "./libs/Library.js";
-import { NUMBERS } from "./utils/Utils.js";
+import { sum } from "./src/libs/Library.js";
+import { NUMBERS } from "./src/utils/Utils.js";
 
 /**
  * Toma una matriz de números, los suma y devuelve los primeros 10 dígitos del resultado.
- * 
+ *
  * @param numbers - una matriz de cadenas, cada una de las cuales representa un número muy grande
  * @returns Los primeros 10 dígitos de la suma de los números.
  */

@@ -2,6 +2,8 @@
  * * Solución al problema 2 de projecteuler.net
  */
 
+const NUMBER = 4000000;
+
 /**
  * Suma todos los números pares en la secuencia de Fibonacci que son menores 
  * a 4 millones.
@@ -20,12 +22,12 @@
  * 
  * @returns La suma de todos los números pares en la secuencia de Fibonacci hasta 4 millones.
  */
-const fiboEvenNumber = () => {
+const fiboEvenNumber = (number) => {
   let sum = 0,
     x = 1,
     y = 2;
 
-  while (x <= 4000000) {
+  while (x <= number) {
     if (x % 2 === 0) {
       sum += x;
     }
@@ -36,5 +38,4 @@ const fiboEvenNumber = () => {
   return sum;
 };
 
-let result = fiboEvenNumber();
-console.log(result);
+export const pE002 = fiboEvenNumber(NUMBER);

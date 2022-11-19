@@ -203,9 +203,9 @@ export const gridProduct = (ox, oy, dx, dy, number) => {
 };
 
 /**
- * Toma un número y devuelve una matriz de números que son el resultado de la Conjetura 
+ * Toma un número y devuelve una matriz de números que son el resultado de la Conjetura
  * de Collatz.
- * 
+ *
  * @param number - El número inicial de la secuencia.
  * @returns Una matriz de números que son el resultado de la conjetura de Collatz.
  */

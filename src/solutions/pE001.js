@@ -14,7 +14,8 @@ const NATURAL_NUMBER = 1000;
  */
 const sumMultiples = (number, multiple1, multiple2) => {
   let sum = 0;
-  if (multiple1 < 0 || multiple2 < 0) throw new Error("Solo números positivos.").message;
+  if (multiple1 < 0 || multiple2 < 0)
+    throw new Error("Solo números positivos.").message;
   for (let i = 0; i < number; i++) {
     if (i % multiple1 === 0 || i % multiple2 === 0) {
       sum += i;
@@ -23,5 +24,4 @@ const sumMultiples = (number, multiple1, multiple2) => {
   return sum;
 };
 
-let result = sumMultiples(NATURAL_NUMBER, 3, 5);
-console.log(result);
+export const pE001 = sumMultiples(NATURAL_NUMBER, 3, 5);

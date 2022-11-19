@@ -2,15 +2,15 @@
  * * Solución al problema 14 de projecteuler.net
  */
 
-import { collatzConjecture } from "./libs/Library.js";
+import { collatzConjecture } from "./src/libs/Library.js";
 
 const NUM_UNDER = 1000000;
 
 /**
- * Recorre todos los números del 1 al startNum, y para cada número calcula la longitud 
- * de la cadena, y si la longitud de la cadena es mayor que la longitud de la cadena 
+ * Recorre todos los números del 1 al startNum, y para cada número calcula la longitud
+ * de la cadena, y si la longitud de la cadena es mayor que la longitud de la cadena
  * más larga, actualiza el número y la longitud de la cadena más larga.
- * 
+ *
  * @param startNum - El número desde el que empezar la cadena.
  * @returns El número que produce la cadena más larga.
  */

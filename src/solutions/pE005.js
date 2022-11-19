@@ -5,7 +5,7 @@
 /*
  * * Importar la función `primeFactor` desde el archivo `pE003.js`.
  */
-import { primeFactor } from "./libs/Library.js";
+import { primeFactor } from "./src/libs/Library.js";
 
 const MIN_MULTIPLE = 1,
   MAX_MULTIPLE = 20;
