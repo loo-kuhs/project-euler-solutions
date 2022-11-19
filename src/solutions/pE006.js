@@ -5,7 +5,7 @@
 const NATURAL_NUMBERS = 100;
 
 /**
- * Calcula la diferencia entre la suma de los cuadrados de los primeros números 
+ * Calcula la diferencia entre la suma de los cuadrados de los primeros números
  * naturales y el cuadrado de la suma.
  * @param numbers - El número de números a sumar.
  * @returns La diferencia entre la suma de los cuadrados de los cien primeros números naturales y el
@@ -22,5 +22,4 @@ const sumSquareDifference = (numbers) => {
   return sum * sum - sum2;
 };
 
-let result = sumSquareDifference(NATURAL_NUMBERS);
-console.log(result);
+export const pE006 = sumSquareDifference(NATURAL_NUMBERS);

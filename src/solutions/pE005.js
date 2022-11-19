@@ -2,8 +2,8 @@
  * * Solución al problema 5 de projecteuler.net
  */
 
-/*
- * * Importar la función `primeFactor` desde el archivo `pE003.js`.
+/**
+ * Importar la función `primeFactor` desde el archivo `pE003.js`.
  */
 import { minPolynomial, primeFactor } from "../libs/Library.js";
 
