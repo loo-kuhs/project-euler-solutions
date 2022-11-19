@@ -5,7 +5,7 @@
 /**
  * Importar la función `isPrime` del archivo `Library.js`.
  */
-import { isPrime } from "./src/libs/Library.js";
+import { isPrime } from "../libs/Library.js";
 
 const PRIME = 10001;
 
@@ -27,5 +27,5 @@ const nthPrime = (number) => {
   return num;
 };
 
-let result = nthPrime(PRIME);
-console.log(result);
+const pE007 = nthPrime(PRIME);
+export default pE007;

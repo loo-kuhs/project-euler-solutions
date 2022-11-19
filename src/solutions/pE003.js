@@ -24,4 +24,5 @@ const largestPrimeFactor = (number) => {
   return largestPrime;
 };
 
-export const pE003 = largestPrimeFactor(NUM);
+const pE003 = largestPrimeFactor(NUM);
+export default pE003;

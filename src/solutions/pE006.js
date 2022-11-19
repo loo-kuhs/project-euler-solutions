@@ -22,4 +22,5 @@ const sumSquareDifference = (numbers) => {
   return sum * sum - sum2;
 };
 
-export const pE006 = sumSquareDifference(NATURAL_NUMBERS);
+const pE006 = sumSquareDifference(NATURAL_NUMBERS);
+export default pE006;

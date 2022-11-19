@@ -24,4 +24,5 @@ const sumMultiples = (number, multiple1, multiple2) => {
   return sum;
 };
 
-export const pE001 = sumMultiples(NATURAL_NUMBER, 3, 5);
+const pE001 = sumMultiples(NATURAL_NUMBER, 3, 5);
+export default pE001;

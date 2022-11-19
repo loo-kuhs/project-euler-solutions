@@ -33,4 +33,5 @@ const largestPalindromeProduct = (min, max) => {
   return maxim;
 };
 
-export const pE004 = largestPalindromeProduct(NUM1, NUM2);
+const pE004 = largestPalindromeProduct(NUM1, NUM2);
+export default pE004;

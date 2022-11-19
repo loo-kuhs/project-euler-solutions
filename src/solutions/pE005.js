@@ -32,4 +32,5 @@ const smallMultiple = (min, max) => {
   return multiple;
 };
 
-export const pE005 = smallMultiple(MIN_MULTIPLE, MAX_MULTIPLE);
+const pE005 = smallMultiple(MIN_MULTIPLE, MAX_MULTIPLE);
+export default pE005;
