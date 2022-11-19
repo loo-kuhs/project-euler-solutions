@@ -2,7 +2,7 @@
  * * Solución al problema 8 de projecteuler.net
  */
 
-import { product } from "./src/libs/Library.js";
+import { product } from "../libs/Library.js";
 
 const NUMBER =
   "73167176531330624919225119674426574742355349194934" +
@@ -47,5 +47,5 @@ const largestProduct = (string, number) => {
   return max;
 };
 
-let result = largestProduct(NUMBER, ADJACENT);
-console.log(result);
+const pE008 = largestProduct(NUMBER, ADJACENT);
+export default pE008;

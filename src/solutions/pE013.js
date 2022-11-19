@@ -2,8 +2,8 @@
  * * Solución al problema 13 de projecteuler.net
  */
 
-import { sum } from "./src/libs/Library.js";
-import { NUMBERS } from "./src/utils/Utils.js";
+import { sum } from "../libs/Library.js";
+import { NUMBERS } from "../utils/Utils.js";
 
 /**
  * Toma una matriz de números, los suma y devuelve los primeros 10 dígitos del resultado.
@@ -20,5 +20,5 @@ const largeSum = (numbers) => {
   return result.slice(0, 10);
 };
 
-let result = largeSum(NUMBERS);
-console.log(result);
+const pE013 = largeSum(NUMBERS);
+export default pE013;

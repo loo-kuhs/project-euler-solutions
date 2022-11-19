@@ -2,7 +2,7 @@
  * * Solución al problema 12 de projecteuler.net
  */
 
-import { nthDivisor, triangleNumber } from "./src/libs/Library.js";
+import { nthDivisor, triangleNumber } from "../libs/Library.js";
 
 const NUMBER = 500;
 
@@ -27,5 +27,5 @@ const firstTriangular = (number) => {
   return triangleNumber(i);
 };
 
-let result = firstTriangular(NUMBER);
-console.log(result);
+const pE012 = firstTriangular(NUMBER);
+export default pE012;

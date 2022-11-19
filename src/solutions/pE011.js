@@ -2,8 +2,8 @@
  * * Solución al problema 11 de projecteuler.net
  */
 
-import { gridProduct } from "./src/libs/Library.js";
-import { GRID } from "./src/utils/Utils.js";
+import { gridProduct } from "../libs/Library.js";
+import { GRID } from "../utils/Utils.js";
 
 const CONSECUTIVE = 4;
 
@@ -39,5 +39,5 @@ const greatestProduct = (grid, cons) => {
   return ans;
 };
 
-let result = greatestProduct(GRID, CONSECUTIVE);
-console.log(result);
+const pE011 = greatestProduct(GRID, CONSECUTIVE);
+export default pE011;

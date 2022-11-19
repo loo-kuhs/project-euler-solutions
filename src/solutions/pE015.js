@@ -23,5 +23,5 @@ const latticePaths = (() => {
   };
 })();
 
-let result = latticePaths(GRID, GRID);
-console.log(result);
+const pE015 = latticePaths(GRID, GRID);
+export default pE015;

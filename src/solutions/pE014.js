@@ -2,7 +2,7 @@
  * * Solución al problema 14 de projecteuler.net
  */
 
-import { collatzConjecture } from "./src/libs/Library.js";
+import { collatzConjecture } from "../libs/Library.js";
 
 const NUM_UNDER = 1000000;
 
@@ -28,5 +28,5 @@ const longestChain = (startNum) => {
   return number;
 };
 
-let result = longestChain(NUM_UNDER);
-console.log(result);
+const pE014 = longestChain(NUM_UNDER);
+export default pE014;

@@ -2,7 +2,7 @@
  * * Solución al problema 10 de projecteuler.net
  */
 
-import { isPrime } from "./src/libs/Library.js";
+import { isPrime } from "../libs/Library.js";
 
 const NUMBER = 2000000;
 
@@ -24,5 +24,5 @@ const sumAllPrimeNumsUntil = (number) => {
   return sum;
 };
 
-let result = sumAllPrimeNumsUntil(NUMBER);
-console.log(result);
+const pE010 = sumAllPrimeNumsUntil(NUMBER);
+export default pE010;

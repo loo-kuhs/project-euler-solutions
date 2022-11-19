@@ -22,5 +22,5 @@ const pythagoreanTriple = (number) => {
   throw new Error("No encontrado").message;
 };
 
-let result = pythagoreanTriple(NUMBER);
-console.log(result);
+const pE009 = pythagoreanTriple(NUMBER);
+export default pE009;
