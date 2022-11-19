@@ -1,6 +1,6 @@
 {
   "name": "project-euler-solutions",
-  "version": "1.0.1",
+  "version": "2.1.15",
   "description": "Solutions for projecteuler.net problems",
   "main": "app.js",
   "type": "module",

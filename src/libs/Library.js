@@ -52,7 +52,7 @@ export const sqrt = (x) => {
  */
 export const isPrime = (x) => {
   try {
-    if (x < 0) throw new Error("Numero negativo");
+    if (x < 0) throw new Error("Numero negativo").message;
     let end = Math.floor(Math.sqrt(x));
     if (x === 0 || x === 1) {
       return false;
@@ -102,6 +102,41 @@ const listPrimes = (number) => {
     if (isPrime[i]) {
       result[j] = i;
       j++;
+    }
+  }
+  return result;
+};
+
+/**
+ * Toma dos matrices de números y devuelve una nueva matriz de números que contiene todos los
+ * números de las dos matrices de entrada, pero sin duplicados.
+ * @param mP1 - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+ * 25 , 26, 27, 28, 29, 30, ... ]
+ * @param mP2 - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+ * 25 , 26, 27, 28, 29, 30, ... ]
+ * @returns El resultado de la ordenación por fusión.
+ */
+export const minPolynomial = (minPoly1, minPoly2) => {
+  let result = [],
+    x,
+    y;
+
+  while (minPoly1.length || minPoly2.length) {
+    if (minPoly1.length === 0) {
+      result.push(minPoly2.shift());
+    } else if (minPoly2.length === 0) {
+      result.push(minPoly1.shift());
+    } else {
+      x = minPoly1[0];
+      y = minPoly2[0];
+      if (x < y) {
+        result.push(minPoly1.shift());
+      } else if (x > y) {
+        result.push(minPoly2.shift());
+      } else {
+        result.push(minPoly1.shift());
+        minPoly2.shift();
+      }
     }
   }
   return result;
@@ -160,16 +195,16 @@ export const nthDivisor = (number) => {
 export const triangleNumber = (number) => (number * (number + 1)) / 2;
 
 /**
- * * Toma una cadena, un número y una posición, y devuelve el
- * * producto del número de caracteres en la cadena que comienza en
- * * la posición.
+ * Toma una cadena, un número y una posición, y devuelve el producto del número de 
+ * caracteres en la cadena que comienza en la posición.
  *
- * * Por ejemplo, si llamas a la función así:
- *    ? producto("123456789", 3, 2);
+ * Por ejemplo, si llamas a la función así:
+ *    producto("123456789", 3, 2);
  *
- * * Devolverá el producto de los caracteres en la cadena que comienza
- * * en la posición 2 y continúa por 3 caracteres. En este caso,
- * * ese es el producto de los caracteres "345", que es 120.
+ * Devolverá el producto de los caracteres en la cadena que comienza en la posición 2 
+ * y continúa por 3 caracteres. En este caso, ese es el producto de los caracteres "345", 
+ * que es 120.
+ * 
  * @param string - la cadena para buscar
  * @param number - el número de dígitos adyacentes a multiplicar
  * @param position - la posición inicial de la subcadena
