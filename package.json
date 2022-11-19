@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/loo-kuhs/project-euler-solutions/issues"
   },
-  "homepage": "https://github.com/loo-kuhs/project-euler-solutions#readme"
+  "homepage": "https://github.com/loo-kuhs/project-euler-solutions#readme",
+  "dependencies": {
+    "chalk": "^5.1.2"
+  }
 }
