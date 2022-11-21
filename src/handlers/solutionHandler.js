@@ -13,3 +13,4 @@ export { default as pE012 } from "../solutions/pE012.js";
 export { default as pE013 } from "../solutions/pE013.js";
 export { default as pE014 } from "../solutions/pE014.js";
 export { default as pE015 } from "../solutions/pE015.js";
+export { default as pE016 } from "../solutions/pE016.js";
