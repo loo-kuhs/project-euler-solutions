@@ -14,3 +14,21 @@ export { default as pE013 } from "../solutions/pE013.js";
 export { default as pE014 } from "../solutions/pE014.js";
 export { default as pE015 } from "../solutions/pE015.js";
 export { default as pE016 } from "../solutions/pE016.js";
+
+/* import glob from "glob";
+import path from "path";
+
+
+
+const exports = {};
+
+files.forEach((file) => {
+  import(file).then((module) => {
+    Object.defineProperty(exports, module.default.name, {
+      value: module.default,
+      enumerable: true,
+    });
+  });
+});
+
+export default exports; */

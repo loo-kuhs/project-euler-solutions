@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/loo-kuhs/project-euler-solutions#readme",
   "dependencies": {
-    "chalk": "^5.1.2"
+    "chalk": "^5.1.2",
+    "glob": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

@@ -4,24 +4,36 @@
 
 const GRID = 20;
 
-const latticePaths = (() => {
-  let gridSize = 20,
-    grid = [gridSize];
-  for (let i = 0; i <= gridSize; i++) {
-    grid[i] = [gridSize];
-  }
+/**
+ * Comenzamos en la esquina superior izquierda de la cuadrícula y buscamos recursivamente 
+ * el número de caminos a la esquina inferior derecha sumando el número de caminos desde 
+ * la celda a la izquierda y la celda arriba
+ * @param gridSize - El tamaño de la cuadrícula.
+ * @returns El número de rutas desde la esquina superior izquierda hasta la esquina 
+ * inferior derecha de una cuadrícula de tamaño gridSize.
+ */
+const latticePaths = (gridSize) => {
+  let cache = {};
 
-  return (gridX, gridY) => {
-    let paths = 0;
-    if (gridX === 0 || gridY === 0) return 1;
-    if (gridX > gridSize || gridY > gridSize) return -1;
-    if (typeof grid[gridX][gridY] === "number") return grid[gridX][gridY];
+  const initGrid = () => {
+    for (let i = 0; i <= gridSize; i++) {
+      for (let j = 0; j <= gridSize; j++) {
+        cache[`${i},${j}`] = null;
+      }
+    }
+  };
 
-    paths = latticePaths(gridX - 1, gridY) + latticePaths(gridX, gridY - 1);
-    grid[gridX][gridY] = paths;
+  const getPaths = (x, y) => {
+    if (x === 0 || y === 0) return 1;
+    if (cache[`${x},${y}`] !== null) return cache[`${x},${y}`];
+    const paths = getPaths(x - 1, y) + getPaths(x, y - 1);
+    cache[`${x},${y}`] = paths;
     return paths;
   };
-})();
 
-const pE015 = latticePaths(GRID, GRID);
+  initGrid();
+  return getPaths(gridSize, gridSize);
+};
+
+const pE015 = latticePaths(GRID);
 export default pE015;
