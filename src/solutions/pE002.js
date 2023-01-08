@@ -2,40 +2,73 @@
  * * Solución al problema 2 de projecteuler.net
  */
 
+/**
+ * Una constante que se utiliza para limitar el número de iteraciones. 
+ */
 const NUMBER = 4000000;
 
+class Fibonacci {
+  /**
+   * Crea una instancia de Fibonacci.
+   */
+  constructor() {
+    this.sum = 0;
+    this.lastEvenNumber = 0;
+    this.evenNumbers = [];
+  }
+
+  /**
+   * Añade un número par a la suma y al array de números pares.
+   * @param {number} number - Número par a añadir.
+   */
+  addEvenNumber(number) {
+    this.sum += number;
+    this.evenNumbers.push(number);
+    this.lastEvenNumber = number;
+  }
+
+  /**
+   * Calcula la suma de los números pares de la serie Fibonacci menores o iguales que
+   * number.
+   * @param {number} number - Límite superior para el cálculo de los números pares de
+   * la serie Fibonacci.
+   * @returns {number} Suma de los números pares de la serie Fibonacci.
+   */
+  calculate(number) {
+    if (number < this.lastEvenNumber) {
+      return this.sum;
+    }
+
+    let x = 1,
+      y = 2;
+
+    while (y <= number) {
+      if (y % 2 === 0) {
+        this.addEvenNumber(y);
+      }
+
+      const z = x + y;
+      x = y;
+      y = z;
+    }
+
+    return this.sum;
+  }
+}
+
 /**
- * Suma todos los números pares en la secuencia de Fibonacci que son menores
- * a 4 millones.
- *
- * La secuencia de Fibonacci es una serie de números donde cada número es
- * la suma de los dos números anteriores. Los dos primeros números son 0 y 1.
- *
- * Los diez primeros números de la sucesión de Fibonacci son:
- * => 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
- *
- * Los primeros diez números pares en la sucesión de Fibonacci son:
- * => 0, 2, 8, 34
- *
- * La suma de los primeros diez números pares en la sucesión de Fibonacci es:
- * =>  0 + 2 + 8 + 34 = 44
- *
- * @returns La suma de todos los números pares en la secuencia de Fibonacci hasta 4 millones.
+ * Calcula la suma de los números pares de la serie Fibonacci menores o iguales que number.
+ * @param {number} number - Límite superior para el cálculo de los números pares.
+ * @returns {number} Suma de los números pares.
+ * @throws {Error} Si number no es un número entero positivo.
  */
 const fiboEvenNumber = (number) => {
-  let sum = 0,
-    x = 1,
-    y = 2;
-
-  while (x <= number) {
-    if (x % 2 === 0) {
-      sum += x;
-    }
-    let z = x + y;
-    x = y;
-    y = z;
+  if (Number.isInteger(number) && number > 0) {
+    const fibonacci = new Fibonacci();
+    return fibonacci.calculate(number);
+  } else {
+    throw new Error(`El número ${number} no es un número entero positivo.`);
   }
-  return sum;
 };
 
 const pE002 = fiboEvenNumber(NUMBER);
