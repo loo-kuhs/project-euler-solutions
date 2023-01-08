@@ -1,0 +1,3 @@
+# Project Euler
+
+[Project Euler](https://projecteuler.net/) es una serie de desafiantes problemas matemáticos y de programación informática que requerirán algo más que conocimientos matemáticos para resolverlos. Aunque las matemáticas le ayudarán a llegar a métodos elegantes y eficientes, para resolver la mayoría de los problemas será necesario el uso de un ordenador y conocimientos de programación.
