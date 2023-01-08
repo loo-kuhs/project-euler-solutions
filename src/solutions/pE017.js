@@ -2,44 +2,7 @@
  * * Solución al problema 17 de projecteuler.net
  */
 
-const NUMS2TEXT = {
-  ONES: [
-    "",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-  ],
-  TEENS: [
-    "ten",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
-  ],
-  TENS: [
-    "",
-    "",
-    "twenty",
-    "thirty",
-    "forty",
-    "fifty",
-    "sixty",
-    "seventy",
-    "eighty",
-    "ninety",
-  ],
-};
+import { NUMS2TEXT } from "../utils/Utils.js";
 
 class NumberConverter {
   /**

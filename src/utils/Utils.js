@@ -171,3 +171,45 @@ export const NUMBERS = [
   "20849603980134001723930671666823555245252804609722",
   "53503534226472524250874054075591789781264330331690",
 ];
+
+/**
+ * Constante utilizada para el ejercicio pE017.js
+ */
+export const NUMS2TEXT = {
+  ONES: [
+    "",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ],
+  TEENS: [
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+  ],
+  TENS: [
+    "",
+    "",
+    "twenty",
+    "thirty",
+    "forty",
+    "fifty",
+    "sixty",
+    "seventy",
+    "eighty",
+    "ninety",
+  ],
+};
