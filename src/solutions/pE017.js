@@ -41,54 +41,79 @@ const NUMS2TEXT = {
   ],
 };
 
-/**
- * Si el número es 1000, devuelve "mil". De lo contrario, si el número es mayor que 99, devuelve el
- * número de centenas, la palabra "centena" y el número de decenas y unidades. De lo contrario, si el
- * número es mayor o igual a 10 y menor a 20, devuelva el número de adolescentes. De lo contrario,
- * devuelve el número de decenas y el número de unidades.
- * @param number - El número a convertir en palabras.
- * @returns una cuerda.
- */
-const numberToWords = (number) => {
-  const TENS = (number) => {
-    if (number < 10) {
-      return NUMS2TEXT.ONES[number];
-    } else if (number >= 10 && number < 20) {
-      return NUMS2TEXT.TEENS[number - 10];
-    } else {
-      return NUMS2TEXT.TENS[Math.floor(number / 10)] + " " + NUMS2TEXT.ONES[number % 10];
-    }
-  };
-
-  const HUNDREDS = (number) => {
-    if (number > 99) {
-      return (
-        NUMS2TEXT.ONES[Math.floor(number / 100)] +
-        " hundred " +
-        (number % 100 === 0 ? "" : "and " + TENS(number % 100))
-      );
-    } else {
-      return TENS(number);
-    }
-  };
-
-  if (number === 1000) {
-    return "one thousand";
-  } else {
-    return HUNDREDS(number);
+class NumberConverter {
+  /**
+   * Crea una instancia de NumberConverter.
+   * @param {number} number - Número a convertir.
+   */
+  constructor(number) {
+    this.number = number;
   }
-};
 
+  /**
+   * Convierte un número a palabras.
+   * @param {number} number - Número a convertir.
+   * @returns {string} - La representación en palabras del número.
+   */
+  toWords(number) {
+    /**
+     * Convierte un número de dos dígitos a palabras.
+     * @param {number} number - El número de dos dígitos a convertir.
+     * @returns {string} - La representación en palabras del número.
+     */
+    const TENS = (number) => {
+      if (number < 10) {
+        return NUMS2TEXT.ONES[number];
+      } else if (number < 20) {
+        return NUMS2TEXT.TEENS[number - 10];
+      } else {
+        return `${NUMS2TEXT.TENS[Math.floor(number / 10)]} ${
+          NUMS2TEXT.ONES[number % 10]
+        }`;
+      }
+    };
+
+    /**
+     * Convierte un número de tres dígitos a palabras.
+     * @param {number} number - El número de tres dígitos a convertir.
+     * @returns {string} - La representación en palabras del número.
+     */
+    const HUNDREDS = (number) => {
+      if (number > 99) {
+        return `${NUMS2TEXT.ONES[Math.floor(number / 100)]} hundred ${
+          number % 100 === 0 ? "" : "and "
+        }${TENS(number % 100)}`;
+      } else {
+        return TENS(number);
+      }
+    };
+
+    if (number === 1000) {
+      return "one thousand";
+    } else {
+      return HUNDREDS(number);
+    }
+  }
+
+  /**
+   * Cuenta el número de letras de una palabra.
+   * @param {string} word - Palabra a contar letras.
+   * @returns {number} - Número de letras de la palabra.
+   */
+  countLetters(word) {
+    return word.replace(/\s/g, "").length;
+  }
+}
 /**
- * Toma un número, lo convierte en palabras, elimina todos los espacios y devuelve la longitud de la
- * cadena resultante.
- * @param number - El número para contar las letras de.
- * @returns El número de letras en las palabras de los números del 1 al número pasado.
+ * Cuenta la cantidad de letras en la representación en palabras de un rango de números.
+ * @param {number} number - El límite superior del rango de números.
+ * @returns {number} - La cantidad de letras en la representación en palabras de los números del rango.
  */
 const countLetters = (number) => {
+  const converter = new NumberConverter(number);
   let sum = 0;
   for (let i = 1; i <= number; i++) {
-    sum += numberToWords(i).replace(/\s/g, "").length;
+    sum += converter.countLetters(converter.toWords(i));
   }
   return sum;
 };

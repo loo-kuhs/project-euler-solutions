@@ -14,6 +14,7 @@ export { default as pE013 } from "../solutions/pE013.js";
 export { default as pE014 } from "../solutions/pE014.js";
 export { default as pE015 } from "../solutions/pE015.js";
 export { default as pE016 } from "../solutions/pE016.js";
+export { default as pE017 } from "../solutions/pE017.js";
 
 /* import glob from "glob";
 import path from "path";
